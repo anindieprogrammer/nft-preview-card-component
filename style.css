@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  /* Colors */
+  /* Primary */
+  --softBlue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --veryDarkBlueMain: hsl(217, 54%, 11%); /* (main BG) */
+  --veryDarkBlueCard: hsl(216, 50%, 16%); /* (card BG) */
+  --veryDarkBlueLine: hsl(215, 32%, 27%); /* (line) */
+  --white: hsl(0, 0%, 100%);
+
+  /* Fonts */
+  --fontSizeParagraph: 18px; /* (paragraph) */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+p {
+  font-size: var(--fontSizeParagraph);
+}
+
+.section {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--veryDarkBlueMain);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section .container {
+  width: 280px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--veryDarkBlueCard);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.section .img-container {
+  height: 50%;
+  width: 100%;
+  background-image: url(./images/image-equilibrium.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+
+.section .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  border-radius: 0.5rem;
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.section .overlay:hover {
+  opacity: 1;
+}
+
+.section .overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section .detail-container {
+  height: 50%;
+}
+
+.section .detail-container .head {
+  margin: 1.2rem 0rem;
+}
+
+.section .detail-container .head a {
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.section .detail-container .head a:hover {
+  color: var(--cyan);
+}
+
+.section .detail-container .desc {
+  color: var(--softBlue);
+  margin-bottom: 1.2rem;
+  font-size: 0.88rem;
+}
+
+.section .detail-container .stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  font-size: 0.88rem;
+}
+
+.section .detail-container .stats .price {
+  color: var(--cyan);
+  display: flex;
+  align-items: center;
+}
+
+.section .detail-container .stats .price img {
+  margin-right: 6px;
+}
+
+.section .detail-container .stats .time {
+  color: var(--softBlue);
+  display: flex;
+  align-items: center;
+}
+
+.section .detail-container .stats .time img {
+  margin-right: 6px;
+}
+
+.section .detail-container .divider {
+  background-color: var(--cyan);
+  height: 1px;
+  width: 100%;
+  opacity: 0.25;
+  margin-bottom: 1.2rem;
+}
+
+.section .detail-container .author {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.section .detail-container .author img {
+  height: 33px;
+  width: 33px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.section .detail-container .author .creator {
+  color: var(--softBlue);
+  margin-right: 6px;
+}
+
+.section .detail-container .author span {
+  font-size: 0.88rem;
+}
+
+.section .detail-container .author span a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.section .detail-container .author span a:hover {
+  color: var(--softBlue);
+}
