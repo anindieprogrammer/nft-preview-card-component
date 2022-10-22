@@ -135,10 +135,9 @@ p {
 }
 
 .section .detail-container .divider {
-  background-color: var(--cyan);
+  background-color: var(--veryDarkBlueLine);
   height: 1px;
   width: 100%;
-  opacity: 0.25;
   margin-bottom: 1.2rem;
 }
 
